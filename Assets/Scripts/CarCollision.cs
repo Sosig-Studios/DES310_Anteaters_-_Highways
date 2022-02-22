@@ -10,8 +10,7 @@ public class CarCollision : MonoBehaviour
     {
         if (collisionInfo.gameObject.tag == "AntEater")
         {
-            Debug.Log("Hit");
-            carScript.speed = -2;
+            Debug.Log("Car Hit Anteater");
             StartCoroutine(StopCar());
         }
 

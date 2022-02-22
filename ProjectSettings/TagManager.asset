@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Car
   - AntEater
+  - Anthill
   layers:
   - Default
   - TransparentFX
