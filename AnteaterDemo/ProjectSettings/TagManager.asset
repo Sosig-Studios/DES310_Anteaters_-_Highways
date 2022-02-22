@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Car
   - Anthill
+  - LevelEnd
   layers:
   - Default
   - TransparentFX

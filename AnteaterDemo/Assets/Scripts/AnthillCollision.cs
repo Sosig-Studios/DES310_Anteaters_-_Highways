@@ -27,7 +27,7 @@ public class AnthillCollision : MonoBehaviour
 
         while(maxSpeed != patrollerScript.speed)
         {
-            patrollerScript.speed += 1;
+            patrollerScript.speed += 2;
             yield return new WaitForSeconds(1.0f);
         }
     }
