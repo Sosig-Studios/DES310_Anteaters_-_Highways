@@ -7,6 +7,7 @@ TagManager:
   - Car
   - AntEater
   - Anthill
+  - Tree
   layers:
   - Default
   - TransparentFX
