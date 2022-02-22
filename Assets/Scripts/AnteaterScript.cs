@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Patroller : MonoBehaviour
+public class AnteaterScript : MonoBehaviour
 {
     public Transform[] waypoints;
     public int speed;
