@@ -22,11 +22,6 @@ public class AntEaterCollision : MonoBehaviour
 
         }
 
-        if (collisionInfo.gameObject.tag == "Tree")
-        {
-            Debug.Log("Anteater Hit Tree");
-            endLevel();// ends level...
-        }
 
     }
 
@@ -34,19 +29,16 @@ public class AntEaterCollision : MonoBehaviour
     {
         float maxSpeed = patrollerScript.speed;
         patrollerScript.speed = 0;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(collision.gameObject);
 
-        while (maxSpeed != patrollerScript.speed)
+        do
         {
             patrollerScript.speed += 2;
             yield return new WaitForSeconds(1.0f);
         }
-    }
-
-    void endLevel()
-    {
-        SceneManager.LoadScene("WinState"); //load win state 
+        while (maxSpeed != patrollerScript.speed);
+        
     }
 
 }
