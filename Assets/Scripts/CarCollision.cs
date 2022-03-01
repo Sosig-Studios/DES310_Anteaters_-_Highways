@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarCollision : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CarCollision : MonoBehaviour
         {
             Debug.Log("Car Hit Anteater");
             StartCoroutine(StopCar());
+            changeStateLose();
         }
 
     }
@@ -23,5 +25,11 @@ public class CarCollision : MonoBehaviour
         carScript.speed = 7;
         yield return new WaitForSeconds(0.2f);
         carScript.speed = 0;
+    }
+
+    void changeStateLose()
+    {
+        SceneManager.LoadScene("LoseState");
+        //load lose state if car collides with anteater.
     }
 }
