@@ -9,12 +9,13 @@ public class CarScript : MonoBehaviour
 
     private int waypointIndex;
     private float distance;
-
+    private float maxSpeed;
     // Start is called before the first frame update
     void Start()
     {
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
+        maxSpeed = speed;
     }
 
     // Update is called once per frame
@@ -48,10 +49,38 @@ public class CarScript : MonoBehaviour
     {
         //speed = 0;
         //Destroy(gameObject);
-
-
         StartCoroutine(SlowDownCar());
     }
+
+    void OnMouseUp()
+    {
+        Debug.Log("Mouse Up");
+        StartCoroutine(SpeedUpCar());
+    }
+
+    IEnumerator SlowDownCar()
+    {
+        while (speed != 0)
+        {
+            speed -= 1;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+    }
+
+    IEnumerator SpeedUpCar()
+    {
+        while (maxSpeed != speed)
+        {
+            speed += 1;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+}
+
+/*
+stop cars on click
+collision with anteater
 
     IEnumerator SlowDownCar()
     {
@@ -68,11 +97,5 @@ public class CarScript : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-}
-
-/*
-stop cars on click
-collision with anteater
-
 
 */
