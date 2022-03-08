@@ -15,11 +15,7 @@ public class CarCollision : MonoBehaviour
 
         }
 
-        if(collisionInfo.gameObject.tag == "Car")
-        {
-            Debug.Log("Car too close to another car");
-            StartCoroutine(StopCar());
-        }
+
 
     }
 
