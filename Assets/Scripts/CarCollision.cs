@@ -12,7 +12,10 @@ public class CarCollision : MonoBehaviour
         {
             Debug.Log("Car Hit Anteater");
             StartCoroutine(StopCar());
+
         }
+
+
 
     }
 
