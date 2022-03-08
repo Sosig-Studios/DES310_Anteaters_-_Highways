@@ -12,6 +12,13 @@ public class CarCollision : MonoBehaviour
         {
             Debug.Log("Car Hit Anteater");
             StartCoroutine(StopCar());
+
+        }
+
+        if(collisionInfo.gameObject.tag == "Car")
+        {
+            Debug.Log("Car too close to another car");
+            StartCoroutine(StopCar());
         }
 
     }
