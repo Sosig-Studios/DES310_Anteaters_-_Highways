@@ -13,6 +13,7 @@ public class AntEaterCollision : MonoBehaviour
         {
             Debug.Log("Anteater Hit Car");
             patrollerScript.speed = 0;
+            loseLevel();
         }
 
         if (collisionInfo.gameObject.tag == "Anthill")
@@ -34,11 +35,15 @@ public class AntEaterCollision : MonoBehaviour
 
         do
         {
-            patrollerScript.speed += 2;
+            patrollerScript.speed += 1;
             yield return new WaitForSeconds(1.0f);
         }
         while (maxSpeed != patrollerScript.speed);
         
     }
 
+    void loseLevel()
+    {
+        SceneManager.LoadScene("LoseState"); //load win state 
+    }
 }
