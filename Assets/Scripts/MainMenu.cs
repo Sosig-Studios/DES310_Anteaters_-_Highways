@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level_1");//loads first level
+        SceneManager.LoadScene("FPlayable_LVL1");//loads first level
        
     }
 
