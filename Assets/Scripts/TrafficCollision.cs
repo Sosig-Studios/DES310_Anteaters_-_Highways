@@ -17,7 +17,7 @@ public class TrafficCollision : MonoBehaviour
         LayerMask mask = (1 << 8);
 
       
-        var dist = 10.0f;
+        var dist = 5.0f;
 
         RaycastHit hit1;
         Debug.DrawRay(transform.position, Vector3.forward * dist, Color.green);
@@ -37,7 +37,7 @@ public class TrafficCollision : MonoBehaviour
     {
         carScript.speed = 0;
         yield return new WaitForSeconds(0.3f);
-        carScript.speed = 7;
+        carScript.speed = 5;
         
         
     }
