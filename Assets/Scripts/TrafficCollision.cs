@@ -29,6 +29,7 @@ public class TrafficCollision : MonoBehaviour
             
             Debug.Log("Car hit");
             StartCoroutine(StopCar());
+            
 
         }
         if (Physics.Raycast(transform.position, Vector3.left, out hit2, dist, mask))
@@ -36,17 +37,19 @@ public class TrafficCollision : MonoBehaviour
 
             Debug.Log("Car hit");
             StartCoroutine(StopCar());
+       
 
         }
+
 
     }
 
 
     IEnumerator StopCar()
     {
-        carScript.speed = 0;
-        yield return new WaitForSeconds(0.3f);
-        carScript.speed = 5;
+      carScript.speed = 0;
+       yield return new WaitForSeconds(0.3f);
+       carScript.speed = 5;
         
         
     }
