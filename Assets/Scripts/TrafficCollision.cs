@@ -24,12 +24,12 @@ public class TrafficCollision : MonoBehaviour
         Debug.DrawRay(transform.position, Vector3.forward * dist, Color.green);
         Debug.DrawRay(transform.position, Vector3.left * dist, Color.green);
 
-        if (Physics.Raycast(transform.position, Vector3.forward, out hit1, dist, mask))
+       if (Physics.Raycast(transform.position, Vector3.forward, out hit1, dist, mask))
         {
             
             Debug.Log("Car hit");
             StartCoroutine(StopCar());
-            
+            //carScript.speed = 0;
 
         }
         if (Physics.Raycast(transform.position, Vector3.left, out hit2, dist, mask))
@@ -37,7 +37,7 @@ public class TrafficCollision : MonoBehaviour
 
             Debug.Log("Car hit");
             StartCoroutine(StopCar());
-       
+            //carScript.speed = 0;
 
         }
 

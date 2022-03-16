@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1715656283974033575}
   - component: {fileID: 1715656283974033574}
   - component: {fileID: 7497005078971723201}
+  - component: {fileID: 3268309847628692100}
   m_Layer: 8
   m_Name: RedTruck
   m_TagString: Car
@@ -76,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints:
   - {fileID: 0}
-  speed: 0
+  speed: 5
 --- !u!114 &7497005078971723201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +91,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carScript: {fileID: 1715656283974033574}
+--- !u!114 &3268309847628692100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949589821613497840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.8417203, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5489512121247020642
 GameObject:
   m_ObjectHideFlags: 0
