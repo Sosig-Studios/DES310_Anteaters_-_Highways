@@ -56,4 +56,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("FPlayable_LVL1");
     }
+
+    public void LoadSettingsMenu()
+    {
+        Debug.Log("Load Settings Menu");
+        SceneManager.LoadScene("SettingsState");
+    }
 }
