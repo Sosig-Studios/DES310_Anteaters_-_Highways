@@ -1390,6 +1390,87 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98494806}
   m_Mesh: {fileID: 8988200289339078023, guid: 0a7c2c961f164114c9ded90fa2bf6932, type: 3}
+--- !u!1 &106031810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 106031811}
+  - component: {fileID: 106031813}
+  - component: {fileID: 106031812}
+  m_Layer: 0
+  m_Name: pPlane39 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &106031811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106031810}
+  m_LocalRotation: {x: 0.023724928, y: 0.27166933, z: -0.015697572, w: 0.96197015}
+  m_LocalPosition: {x: -1.857, y: 0.03, z: -5.802}
+  m_LocalScale: {x: 1.5978239, y: 1.5978239, z: 1.5978239}
+  m_Children: []
+  m_Father: {fileID: 1512884235}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 3.105, y: 31.513, z: -0.993}
+--- !u!23 &106031812
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106031810}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ee32426f85b861e40bd8f9ac959c3d27, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &106031813
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106031810}
+  m_Mesh: {fileID: 5049398816203094204, guid: 54ee701469f3d214a886e26ac703b7f2, type: 3}
 --- !u!1 &128515166
 GameObject:
   m_ObjectHideFlags: 0
@@ -8149,7 +8230,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6fcd4613c75beb747bac61fef4949f14, type: 2}
+  - {fileID: 2100000, guid: ee32426f85b861e40bd8f9ac959c3d27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9421,7 +9502,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6fcd4613c75beb747bac61fef4949f14, type: 2}
+  - {fileID: 2100000, guid: ee32426f85b861e40bd8f9ac959c3d27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18255,7 +18336,7 @@ PrefabInstance:
     - target: {fileID: 4047594319724980120, guid: 54ee701469f3d214a886e26ac703b7f2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6fcd4613c75beb747bac61fef4949f14, type: 2}
+      objectReference: {fileID: 2100000, guid: ee32426f85b861e40bd8f9ac959c3d27, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54ee701469f3d214a886e26ac703b7f2, type: 3}
 --- !u!1 &1826692973
@@ -19006,7 +19087,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6fcd4613c75beb747bac61fef4949f14, type: 2}
+  - {fileID: 2100000, guid: ee32426f85b861e40bd8f9ac959c3d27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
