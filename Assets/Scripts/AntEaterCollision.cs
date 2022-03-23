@@ -7,11 +7,13 @@ public class AntEaterCollision : MonoBehaviour
 {
     public AnteaterScript patrollerScript;
     public AudioSource SfxChime;
+    public AudioSource SfxEat;
 
 
     void Start()
     {
         SfxChime = GetComponent<AudioSource>();
+        SfxEat = GetComponent<AudioSource>();
     }
 
     void OnCollisionEnter(UnityEngine.Collision collisionInfo)
@@ -26,9 +28,8 @@ public class AntEaterCollision : MonoBehaviour
         if (collisionInfo.gameObject.tag == "Anthill")
         {
             Debug.Log("Anteater Hit Anthill");
-            
             StartCoroutine(eatAnthill(collisionInfo));
-
+            SfxChime.Play();
         }
 
 
@@ -36,10 +37,10 @@ public class AntEaterCollision : MonoBehaviour
 
     IEnumerator eatAnthill(UnityEngine.Collision collision)
     {
+        SfxEat.Play();
         float maxSpeed = patrollerScript.speed;
         patrollerScript.speed = 0;
         yield return new WaitForSeconds(0.5f);
-        SfxChime.Play();
         Destroy(collision.gameObject);
 
         do
