@@ -55,6 +55,7 @@ public class CarScript : MonoBehaviour
     void OnMouseUp()
     {
         Debug.Log("Mouse Up");
+
         StartCoroutine(SpeedUpCar());
     }
 
