@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelStateMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject settingsMenuUI;
 
     // Update is called once per frame
     void Update()
@@ -53,12 +52,9 @@ public class LevelStateMenu : MonoBehaviour
 
     public void RetryGame()
     {
-/*        Debug.Log("Retry Game");
+        Debug.Log("Retry Game");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("FPlayable_LVL1");*/
-        pauseMenuUI.SetActive(false);
-        settingsMenuUI.SetActive(true);
-
+        SceneManager.LoadScene("FPlayable_LVL1");
     }
 
     public void LoadSettingsMenu()
