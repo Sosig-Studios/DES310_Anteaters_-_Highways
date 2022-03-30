@@ -14,10 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinState.unity
     guid: 07aa1f575b69df745af47f16ffb9a603
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FPlayable_LVL1.unity
     guid: 688a312f761900549a0a59cbe0a306c3
   - enabled: 1
     path: Assets/Scenes/LoseState.unity
     guid: 367b3992122c6494a80552816511cdee
+  - enabled: 1
+    path: Assets/Scenes/LVL1.unity
+    guid: a6346b3fc38e4f2439e3d9655cd854bb
+  - enabled: 1
+    path: Assets/Scenes/LVL2.unity
+    guid: 47a8c8a735e1e5e4eab1f844252bbf55
   m_configObjects: {}

@@ -8,7 +8,7 @@ public class LoseState : MonoBehaviour
     {
         Debug.Log("Retry Game");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("FPlayable_LVL1");//takes player back to level 1...
+        SceneManager.LoadScene("LVL1");//takes player back to level 1...
     } 
 
     public void MainMenu()
