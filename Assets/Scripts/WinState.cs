@@ -16,5 +16,6 @@ public class WinState : MonoBehaviour
     {
         Debug.Log("To Next Level");
         //load next level...
+        SceneManager.LoadScene("LVL2");
     }
 }
