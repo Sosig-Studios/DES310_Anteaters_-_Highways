@@ -10,6 +10,8 @@ public class CarScript : MonoBehaviour
     private int waypointIndex;
     private float distance;
     private float maxSpeed;
+
+    
     // Start is called before the first frame update
     void Start()
     {
