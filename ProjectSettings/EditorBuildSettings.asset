@@ -9,14 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 86cd29cf50ef0d04bbbbf160cc2d5bac
   - enabled: 0
-    path: Assets/Scenes/Level_1.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/WinState.unity
     guid: 07aa1f575b69df745af47f16ffb9a603
-  - enabled: 0
-    path: Assets/Scenes/FPlayable_LVL1.unity
-    guid: 688a312f761900549a0a59cbe0a306c3
   - enabled: 1
     path: Assets/Scenes/LoseState.unity
     guid: 367b3992122c6494a80552816511cdee
@@ -26,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LVL2.unity
     guid: 47a8c8a735e1e5e4eab1f844252bbf55
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 6e528213b48933e4c8a819f708abb3c3
   m_configObjects: {}

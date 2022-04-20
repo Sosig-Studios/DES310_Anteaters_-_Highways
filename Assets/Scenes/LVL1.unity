@@ -353,6 +353,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58da37f6715ab6849bbe9a9910f6527a, type: 3}
+--- !u!1 &24564771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8654347780135988502, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
+  m_PrefabInstance: {fileID: 209164031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &24564772
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24564771}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 1827226128182048838, guid: 456b3959186d61a4ba29130495af3af1, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &26631333
 GameObject:
   m_ObjectHideFlags: 0
@@ -7444,21 +7464,25 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1399657620}
+    - target: {fileID: 8654347780135988506, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5859920721667002875, guid: 8e94451784d54314296d29ab984fce77, type: 3}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 32.403984
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 16.870016
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 23.250027
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12495,6 +12519,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583594521}
   m_Mesh: {fileID: 573421025984519078, guid: 0a7c2c961f164114c9ded90fa2bf6932, type: 3}
+--- !u!1 &585995846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8654347780135988502, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
+  m_PrefabInstance: {fileID: 1979344341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &585995847
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585995846}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 1827226128182048838, guid: 456b3959186d61a4ba29130495af3af1, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &586752479
 GameObject:
   m_ObjectHideFlags: 0
@@ -26137,21 +26181,25 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1399657620}
+    - target: {fileID: 8654347780135988506, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5859920721667002875, guid: 8e94451784d54314296d29ab984fce77, type: 3}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 36.30935
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 19.095118
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.31977
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26679,6 +26727,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1399657620}
+    - target: {fileID: 8654347780135988506, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5859920721667002875, guid: 8e94451784d54314296d29ab984fce77, type: 3}
     - target: {fileID: 8654347780135988507, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_CastShadows
       value: 1
@@ -26693,15 +26745,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 24.088066
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 16.12846
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 18.830818
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988509, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27742,6 +27794,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2111856194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8654347780135988502, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
+  m_PrefabInstance: {fileID: 1902090909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &2111856195
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111856194}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 1827226128182048838, guid: 456b3959186d61a4ba29130495af3af1, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2117623134
 GameObject:
   m_ObjectHideFlags: 0
