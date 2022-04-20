@@ -15,6 +15,13 @@ public class CarCollision : MonoBehaviour
 
         }
 
+        if (collisionInfo.gameObject.tag == "CarAlert")
+        {
+            Debug.Log("Car Hit Car Alert");
+            StartCoroutine(StopCar());
+
+        }
+
 
 
     }

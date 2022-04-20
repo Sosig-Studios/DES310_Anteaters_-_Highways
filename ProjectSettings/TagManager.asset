@@ -9,6 +9,8 @@ TagManager:
   - Anthill
   - Tree
   - TrafficCollider
+  - CarAlert
+  - CarAlertImage
   layers:
   - Default
   - TransparentFX
