@@ -27,7 +27,7 @@ public class TrafficCollision : MonoBehaviour
        if (Physics.Raycast(transform.position, Vector3.forward, out hit1, dist, mask))
         {
             
-            Debug.Log("Car hit");
+           // Debug.Log("Car hit");
             StartCoroutine(StopCar());
             //carScript.speed = 0;
 
@@ -35,7 +35,7 @@ public class TrafficCollision : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.left, out hit2, dist, mask))
         {
 
-            Debug.Log("Car hit");
+           // Debug.Log("Car hit");
             StartCoroutine(StopCar());
             //carScript.speed = 0;
 
