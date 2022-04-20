@@ -11,14 +11,13 @@ public class CarAlert : MonoBehaviour
     public GameObject carAlertBox;
     public GameObject carAlertImagePrefab;
     private Vector3 pos;
+    public Quaternion imageRotation;
     private bool isSpawned = false;
 
-    void TrafficDetect()
+    void CollisionDetect()
     {
 
         LayerMask mask = (1 << 8);
-
-
         var dist = 5.0f;
 
         RaycastHit hit1;
@@ -40,8 +39,16 @@ public class CarAlert : MonoBehaviour
 
     IEnumerator CarAlertPopUp()
     {
+        Quaternion emptyRotation = Quaternion.identity;
+
+        if (imageRotation == emptyRotation)//doesnt work
+        {
+            imageRotation = carAlertImagePrefab.transform.rotation;
+        }
+
         isSpawned = true;
-        Instantiate(carAlertImagePrefab, pos, carAlertImagePrefab.transform.rotation);
+        Instantiate(carAlertImagePrefab, pos, imageRotation);
+        //
         yield return new WaitForSeconds(1.0f);
         //delete spawn
         GameObject[] carAlertImageObjects = GameObject.FindGameObjectsWithTag("CarAlertImage");
@@ -63,7 +70,7 @@ public class CarAlert : MonoBehaviour
 
     void Update()
     {
-        TrafficDetect();
+        CollisionDetect();
     }
 
     //position would be the position of the box collider 
