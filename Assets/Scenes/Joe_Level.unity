@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1372098028}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -1355,8 +1355,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1372098028}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: LoadMenu
+        m_TargetAssemblyTypeName: LevelStateMenu, Assembly-CSharp
+        m_MethodName: LoadSettingsMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1498,7 +1498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: speed
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: waypoints.Array.size
@@ -2453,7 +2453,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10.93, y: -1.2473}
   m_SizeDelta: {x: 21.8598, y: -24.8607}
   m_Pivot: {x: 0.5, y: 0.5501729}
@@ -3038,7 +3038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &629804246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3116,16 +3116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f08d6474cc5b046ac851f46c52e7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeImage: {fileID: 169965300}
-  MuteVolumeImage: {fileID: 21300000, guid: dbc145e91df7fa245bd1445ceec3d4c7, type: 3}
-  LowVolumeImage: {fileID: 21300000, guid: 37c8d255103673f44962a0b3c4eec3af, type: 3}
-  MidVolumeImage: {fileID: 21300000, guid: ea4ae520fdadf194baeeb20beaa5a986, type: 3}
-  MaxVolumeImage: {fileID: 21300000, guid: 8492c923da3091e49bd56f9009fc21b3, type: 3}
-  sfxImage: {fileID: 1210312072}
-  MuteSFXImage: {fileID: 21300000, guid: dbc145e91df7fa245bd1445ceec3d4c7, type: 3}
-  LowSFXImage: {fileID: 21300000, guid: 37c8d255103673f44962a0b3c4eec3af, type: 3}
-  MidSFXImage: {fileID: 21300000, guid: ea4ae520fdadf194baeeb20beaa5a986, type: 3}
-  MaxSFXImage: {fileID: 21300000, guid: 8492c923da3091e49bd56f9009fc21b3, type: 3}
 --- !u!4 &632497801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 236761683794367452, guid: 449b8cb1a9b944b4cbcfde00fa988ba7, type: 3}
@@ -3688,7 +3678,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10.93, y: -1.2473}
   m_SizeDelta: {x: 21.8598, y: -24.8607}
   m_Pivot: {x: 0.5, y: 0.5501729}
@@ -4414,7 +4404,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1372098028}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMenu
         m_Mode: 1
@@ -5140,7 +5130,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10.93, y: -1.2473}
   m_SizeDelta: {x: 21.8598, y: -24.8607}
   m_Pivot: {x: 0.5, y: 0.5501729}
@@ -6046,7 +6036,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1372098028}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMenu
         m_Mode: 1
@@ -7467,8 +7457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac21a81157a684c9e3b41753151313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 2097534706}
-  settingsMenuUI: {fileID: 629804245}
+  pauseMenuUI: {fileID: 0}
+  settingsMenuUI: {fileID: 0}
 --- !u!1001 &1373284424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7788,7 +7778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: speed
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: waypoints.Array.size
@@ -9339,7 +9329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: speed
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: waypoints.Array.size
