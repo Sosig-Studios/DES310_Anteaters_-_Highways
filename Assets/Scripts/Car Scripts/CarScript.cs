@@ -46,13 +46,13 @@ public class CarScript : MonoBehaviour
         transform.LookAt(waypoints[waypointIndex].position);
     }
 
-    void DeleteCar()
+    /*void DeleteCar()
     {
         if(waypointIndex >= waypoints.Length)
         {
 
         }
-    }
+    }*/
 
 
     void OnMouseDown()
