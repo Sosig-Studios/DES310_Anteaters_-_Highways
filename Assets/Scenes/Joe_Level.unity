@@ -6400,13 +6400,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184342413}
-  m_LocalRotation: {x: -0, y: 0.0054189903, z: -0, w: -0.99998534}
-  m_LocalPosition: {x: -15.51, y: 1.73, z: 13}
+  m_LocalRotation: {x: -0.003817723, y: 0.0038458356, z: 0.7044978, w: -0.7096855}
+  m_LocalPosition: {x: -15.51, y: 2, z: 13}
   m_LocalScale: {x: 1.673788, y: 1.4310294, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: -360.621, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -360.621, z: -89.58}
 --- !u!114 &1184342418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6419,6 +6419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440c3b3275b429a418a89c67cfe2cde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carAlertBox: {fileID: 1184342413}
+  carAlertImagePrefab: {fileID: 3810979475899371511, guid: f3a19593ca45ad74bb08869d5be43756, type: 3}
 --- !u!54 &1184342419
 Rigidbody:
   m_ObjectHideFlags: 0

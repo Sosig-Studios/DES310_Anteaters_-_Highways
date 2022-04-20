@@ -4,27 +4,14 @@ using UnityEngine;
 
 using UnityEngine.SceneManagement;
 
+
+
 public class CarAlert : MonoBehaviour
 {
-  
-
-    void OnCollisionEnter(UnityEngine.Collision collisionInfo)
-    {
-        if (collisionInfo.gameObject.tag == "Car")
-        {
-          
-            Debug.Log("Car Alert Hit Car");
-        }
-
-        if (collisionInfo.gameObject.tag == "AntEater")
-        {
-    
-            Debug.Log("Anteater Hit box alert");
-        }
-
-       
-
-    }
+    public GameObject carAlertBox;
+    public GameObject carAlertImagePrefab;
+    private Vector3 pos;
+    private bool isSpawned = false;
 
     void TrafficDetect()
     {
@@ -40,12 +27,38 @@ public class CarAlert : MonoBehaviour
         if (Physics.Raycast(transform.position, -Vector3.forward, out hit1, dist, mask))
         {
 
-             Debug.Log("Car hit bx alert");
-            //StartCoroutine(StopCar());
-            //carScript.speed = 0;
+           //  Debug.Log("Car hit bx alert");
+           
+            if(!isSpawned)
+            {
+                StartCoroutine(CarAlertPopUp());
+            }
 
         }
   
+    }
+
+    IEnumerator CarAlertPopUp()
+    {
+        isSpawned = true;
+        Instantiate(carAlertImagePrefab, pos, carAlertImagePrefab.transform.rotation);
+        yield return new WaitForSeconds(1.0f);
+        //delete spawn
+        GameObject[] carAlertImageObjects = GameObject.FindGameObjectsWithTag("CarAlertImage");
+        for (int i = 0; i < carAlertImageObjects.Length; i++)
+        {
+            Destroy(carAlertImageObjects[i]);
+        }
+    }
+
+
+
+    void Start()
+    {
+        pos = carAlertBox.transform.position;
+        pos.y += 10; 
+        //pos = Vector3(0, 10, 0);
+        
     }
 
     void Update()
@@ -53,7 +66,11 @@ public class CarAlert : MonoBehaviour
         TrafficDetect();
     }
 
+    //position would be the position of the box collider 
 
+
+
+    
 }
 
 /*
