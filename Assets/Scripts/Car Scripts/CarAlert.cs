@@ -11,6 +11,7 @@ public class CarAlert : MonoBehaviour
     public GameObject carAlertBox;
     public GameObject carAlertImagePrefab;
     private Vector3 pos;
+    public Vector3 positionAddon;
     public Quaternion imageRotation;
     private bool isSpawned = false;
 
@@ -39,13 +40,13 @@ public class CarAlert : MonoBehaviour
 
     IEnumerator CarAlertPopUp()
     {
+        //Set Rotation if empty
         Quaternion emptyRotation = Quaternion.identity;
-
         if (imageRotation == emptyRotation)//doesnt work
         {
             imageRotation = carAlertImagePrefab.transform.rotation;
         }
-
+        //
         isSpawned = true;
         Instantiate(carAlertImagePrefab, pos, imageRotation);
         //
@@ -56,6 +57,8 @@ public class CarAlert : MonoBehaviour
         {
             Destroy(carAlertImageObjects[i]);
         }
+
+        isSpawned = false; // reset for next car
     }
 
 
@@ -63,7 +66,7 @@ public class CarAlert : MonoBehaviour
     void Start()
     {
         pos = carAlertBox.transform.position;
-        pos.y += 10; 
+        pos += positionAddon; 
         //pos = Vector3(0, 10, 0);
         
     }
