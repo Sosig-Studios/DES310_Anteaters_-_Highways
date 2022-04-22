@@ -9,10 +9,15 @@ using UnityEngine.SceneManagement;
 public class CarAlert : MonoBehaviour
 {
     public GameObject carAlertBox;
-    public GameObject carAlertImagePrefab;
-    private Vector3 pos;
-    public Vector3 positionAddon;
-    public Quaternion imageRotation;
+
+    //canvas instatiate
+    public GameObject HUD;
+    public GameObject popUp;
+
+
+    public Vector3 imagePosition;
+    public Vector3 imageScale;
+    public float despawnTime;
     private bool isSpawned = false;
 
     void CollisionDetect()
@@ -40,17 +45,13 @@ public class CarAlert : MonoBehaviour
 
     IEnumerator CarAlertPopUp()
     {
-        //Set Rotation if empty
-        Quaternion emptyRotation = Quaternion.identity;
-        if (imageRotation == emptyRotation)//doesnt work
-        {
-            imageRotation = carAlertImagePrefab.transform.rotation;
-        }
-        //
         isSpawned = true;
-        Instantiate(carAlertImagePrefab, pos, imageRotation);
+        var createImage = Instantiate(popUp) as GameObject;
+        createImage.transform.SetParent(HUD.transform, false);
+        createImage.transform.position += imagePosition;
+        createImage.transform.localScale += imageScale;
         //
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(despawnTime);
         //delete spawn
         GameObject[] carAlertImageObjects = GameObject.FindGameObjectsWithTag("CarAlertImage");
         for (int i = 0; i < carAlertImageObjects.Length; i++)
@@ -65,10 +66,6 @@ public class CarAlert : MonoBehaviour
 
     void Start()
     {
-        pos = carAlertBox.transform.position;
-        pos += positionAddon; 
-        //pos = Vector3(0, 10, 0);
-        
     }
 
     void Update()
@@ -76,14 +73,11 @@ public class CarAlert : MonoBehaviour
         CollisionDetect();
     }
 
-    //position would be the position of the box collider 
-
-
 
     
 }
 
 /*
- Collide with car
-spawn image
+add scaling
+and wait time
 */

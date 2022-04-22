@@ -28,10 +28,10 @@ public class CarCollision : MonoBehaviour
 
     IEnumerator StopCar()
     {
-        carScript.speed = -7;
+        carScript.setSpeed = -7;
         yield return new WaitForSeconds(0.05f);
-        carScript.speed = 7;
+        carScript.setSpeed = 7;
         yield return new WaitForSeconds(0.2f);
-        carScript.speed = 0;
+        carScript.setSpeed = 0;
     }
 }
