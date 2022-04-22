@@ -24,6 +24,7 @@ public class AntEaterCollision : MonoBehaviour
             audioSource.PlayOneShot(sfxHit);
             Debug.Log("Anteater Hit Car");
             patrollerScript.speed = 0;
+            Debug.Log(transform.position);
             loseLevel();
         }
 
@@ -42,8 +43,11 @@ public class AntEaterCollision : MonoBehaviour
     {
         float maxSpeed = patrollerScript.speed;
         patrollerScript.speed = 0;
-        yield return new WaitForSeconds(0.5f);
-        Destroy(collision.gameObject);
+        yield return new WaitForSeconds(0.2f);
+        collision.gameObject.GetComponent<ParticleSystem>().Play();
+        yield return new WaitForSeconds(0.3f);
+        if(collision.gameObject != null)
+            Destroy(collision.gameObject);
 
         do
         {
