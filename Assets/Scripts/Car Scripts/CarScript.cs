@@ -11,6 +11,7 @@ public class CarScript : MonoBehaviour
     private float distance;
     private float maxSpeed;
 
+    bool inTraffic = false;
     
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,14 @@ public class CarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TrafficDetect();
         distance = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
         if (distance < 1f)
         {
             IncreaseIndex();
         }
-        Patrol();
+        if(!inTraffic)
+            Patrol();
     }
 
     void Patrol()
@@ -87,6 +90,40 @@ public class CarScript : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
+    void TrafficDetect()
+    {
+
+        LayerMask mask = (1 << 8);
+
+
+        var dist = 5.0f;
+        var sdist = 3.0f;
+
+        RaycastHit hit1;
+        RaycastHit hit2;
+        RaycastHit hit3;
+        var forward = transform.TransformDirection(Vector3.forward);
+        var left = transform.TransformDirection(Vector3.left);
+        var right = transform.TransformDirection(Vector3.right);
+        Debug.DrawRay(transform.position, forward * dist, Color.green);
+        Debug.DrawRay(transform.position, left * sdist, Color.green);
+        Debug.DrawRay(transform.position, right * sdist, Color.green);
+
+
+        if (Physics.Raycast(transform.position, forward, out hit1, dist, mask))
+        {
+            inTraffic = true;
+
+        }
+        else
+        {
+            inTraffic = false;
+        }
+
+
+    }
+
+
 }
 
 /*

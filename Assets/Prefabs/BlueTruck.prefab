@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 6244513234196119058}
   - component: {fileID: -2093880547430700085}
   - component: {fileID: -7598089920061406163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueTruck
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3687bc5af6814804f96663cfff8c51e4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 940094088290604495}
   - component: {fileID: 8780785419196230358}
   - component: {fileID: 5691055441286645244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Truck02_Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 8356125593279540953}
   - component: {fileID: 5119289312232966970}
   - component: {fileID: 9164023723961864192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Truck02_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

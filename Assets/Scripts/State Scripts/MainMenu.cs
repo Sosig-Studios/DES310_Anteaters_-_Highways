@@ -5,13 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
+    public GameObject levelSelect;
+    private void Start()
+    {
+        levelSelect.SetActive(false);
+    }
     public void PlayGame()
     {
-       
-        SceneManager.LoadScene("LevelSelect");//loads first level
+
+        levelSelect.SetActive(true);
        
     }
 
+    public void LevelSelectReturn()
+    {
+
+        levelSelect.SetActive(false);
+    }
 
 }

@@ -29,8 +29,4 @@ public class LevelSelect : MonoBehaviour
         SceneManager.LoadScene("LVL2");
     }
 
-    public void Return()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
 }
