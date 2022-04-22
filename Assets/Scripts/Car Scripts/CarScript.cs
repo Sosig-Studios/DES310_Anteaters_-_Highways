@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CarScript : MonoBehaviour
 {
+    public SpeedButtons speedButtonsScript;
     public Transform[] waypoints;
-    public int speed;
+    public int setSpeed;
+    private int newSpeed;
 
     private int waypointIndex;
     private float distance;
@@ -16,14 +18,19 @@ public class CarScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        newSpeed = setSpeed;
+        Debug.Log(speedButtonsScript.speedModifier);
+        Debug.Log(setSpeed);
+
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
-        maxSpeed = speed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        maxSpeed = newSpeed * speedButtonsScript.speedModifier;
+
         TrafficDetect();
         distance = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
         if (distance < 1f)
@@ -36,7 +43,7 @@ public class CarScript : MonoBehaviour
 
     void Patrol()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * setSpeed * speedButtonsScript.speedModifier * Time.deltaTime);
     }
 
     void IncreaseIndex()
@@ -60,9 +67,8 @@ public class CarScript : MonoBehaviour
 
     void OnMouseDown()
     {
-        //speed = 0;
-        //Destroy(gameObject);
         StartCoroutine(SlowDownCar());
+        //potential fix: - if this takes less than a second start speed up car
     }
 
     void OnMouseUp()
@@ -74,21 +80,28 @@ public class CarScript : MonoBehaviour
 
     IEnumerator SlowDownCar()
     {
-        while (speed != 0)
+        while (setSpeed != 0)
         {
-            speed -= 1;
+            setSpeed -= 1;
             yield return new WaitForSeconds(0.1f);
+            Debug.Log("set speed: " + setSpeed);
         }
 
     }
 
     IEnumerator SpeedUpCar()
     {
-        while (maxSpeed != speed)
+        while (setSpeed != newSpeed)
         {
-            speed += 1;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
+            setSpeed += 1;
+            Debug.Log("set speed: " + setSpeed);
         }
+
+        /*
+         i dont know how to get on hold working
+        i think when you click on unity it doesnt always recognise the mouse as up, thats the only explanation i can think of
+         */
     }
     void TrafficDetect()
     {
@@ -126,24 +139,3 @@ public class CarScript : MonoBehaviour
 
 }
 
-/*
-stop cars on click
-collision with anteater
-
-    IEnumerator SlowDownCar()
-    {
-        float maxSpeed = speed;
-        while (speed != 0)
-        {
-            speed -= 1;
-            yield return new WaitForSeconds(0.1f);
-        }
-        yield return new WaitForSeconds(0.3f);
-        while (maxSpeed != speed)
-        {
-            speed += 1;
-            yield return new WaitForSeconds(0.1f);
-        }
-    }
-
-*/
