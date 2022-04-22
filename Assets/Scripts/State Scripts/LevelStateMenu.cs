@@ -9,8 +9,14 @@ public class LevelStateMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject settingsMenuUI;
     public GameObject hudUI;
+    public AudioSource levelMusic;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
+    }
+        // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -25,6 +31,7 @@ public class LevelStateMenu : MonoBehaviour
         settingsMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        levelMusic.Play();
     }
 
     public void PauseGame()
@@ -44,6 +51,7 @@ public class LevelStateMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        levelMusic.Pause();
     }
 
     public void LoadMainMenu()
