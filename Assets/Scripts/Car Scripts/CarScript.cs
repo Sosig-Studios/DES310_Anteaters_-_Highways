@@ -113,8 +113,8 @@ public class CarScript : MonoBehaviour
         var sdist = 3.0f;
 
         RaycastHit hit1;
-        RaycastHit hit2;
-        RaycastHit hit3;
+        //RaycastHit hit2; //error hit 2 and 3 never used
+        //RaycastHit hit3;
         var forward = transform.TransformDirection(Vector3.forward);
         var left = transform.TransformDirection(Vector3.left);
         var right = transform.TransformDirection(Vector3.right);

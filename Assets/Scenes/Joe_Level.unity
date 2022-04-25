@@ -216,7 +216,7 @@ MonoBehaviour:
   - {fileID: 750768658}
   - {fileID: 2033956392}
   - {fileID: 57067624}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!114 &4043123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,8 +1164,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: speed
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 3243436744777885830}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
@@ -2111,7 +2115,7 @@ MonoBehaviour:
   - {fileID: 750768658}
   - {fileID: 2033956392}
   - {fileID: 57067624}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!65 &605056990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2673,7 +2677,7 @@ MonoBehaviour:
   - {fileID: 750768658}
   - {fileID: 2033956392}
   - {fileID: 57067624}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!114 &725890068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2843,7 +2847,7 @@ MonoBehaviour:
   - {fileID: 297167194}
   - {fileID: 1313311317}
   - {fileID: 1464869622}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!114 &740524599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4313,7 +4317,7 @@ MonoBehaviour:
   - {fileID: 297167194}
   - {fileID: 1313311317}
   - {fileID: 1464869622}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!114 &1062610064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5125,7 +5129,7 @@ MonoBehaviour:
   - {fileID: 297167194}
   - {fileID: 1313311317}
   - {fileID: 1464869622}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!114 &1261524013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5936,8 +5940,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: speed
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 3243436744777885830}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
@@ -6880,7 +6888,7 @@ MonoBehaviour:
   - {fileID: 750768658}
   - {fileID: 2033956392}
   - {fileID: 57067624}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!114 &1750190673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7276,8 +7284,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: speed
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 3243436744777885830}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
@@ -7858,7 +7870,7 @@ MonoBehaviour:
   - {fileID: 297167194}
   - {fileID: 1313311317}
   - {fileID: 1464869622}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!114 &2022043481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8279,7 +8291,7 @@ MonoBehaviour:
   - {fileID: 297167194}
   - {fileID: 1313311317}
   - {fileID: 1464869622}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!114 &2078421126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8632,7 +8644,7 @@ MonoBehaviour:
   - {fileID: 297167194}
   - {fileID: 1313311317}
   - {fileID: 1464869622}
-  setSpeed: 5
+  setSpeed: 0
 --- !u!114 &2143622629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8847,6 +8859,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3243436743217299063, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3243436743790022831, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8951,6 +8967,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: setFastSpeed
       objectReference: {fileID: 0}
+    - target: {fileID: 3243436744049464970, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243436744148083792, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243436744367064195, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243436744466231033, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3243436744754982692, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8959,9 +8991,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: setNormalSpeed
       objectReference: {fileID: 0}
+    - target: {fileID: 3243436744820402732, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3243436744917970252, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243436744917970254, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243436744917970255, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.001159668
       objectReference: {fileID: 0}
     - target: {fileID: 7641244706548194873, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: speedModifier
