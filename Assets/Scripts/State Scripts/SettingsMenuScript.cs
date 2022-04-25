@@ -19,6 +19,9 @@ public class SettingsMenuScript : MonoBehaviour
     public Sprite MidSFXImage;
     public Sprite MaxSFXImage;
 
+    //Brightness
+    public Image levelBrightness;
+
     public void SetVolumeImage(float musicVolume)
     {
         if(musicVolume == 0f)
@@ -63,7 +66,12 @@ public class SettingsMenuScript : MonoBehaviour
 
     public void SetBrightness(float brightness)
     {
-    
+        Debug.Log("Brightness:" + brightness);
+        
+        Color c = levelBrightness.color;
+        c.a = brightness;
+        levelBrightness.color = c;
+        //RenderSettings.ambientLight = new Color(brightness, brightness, brightness, 1.0f);
     }
 
     // Start is called before the first frame update
