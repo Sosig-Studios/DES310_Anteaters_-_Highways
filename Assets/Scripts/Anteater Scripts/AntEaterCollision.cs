@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class AntEaterCollision : MonoBehaviour
 {
     public AnteaterScript patrollerScript;
+    public AntEaterCounter antEaterCounterScript;
     public AudioSource audioSource;
    
    
@@ -34,6 +35,7 @@ public class AntEaterCollision : MonoBehaviour
             Debug.Log("Anteater Hit Anthill");
             StartCoroutine(eatAnthill(collisionInfo));
             GetComponent<AudioSource>().Play();
+            antEaterCounterScript.setCounterDown();
         }
 
 
