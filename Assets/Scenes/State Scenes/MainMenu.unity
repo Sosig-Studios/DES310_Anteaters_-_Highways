@@ -512,7 +512,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSelect: {fileID: 1827832121}
-  credits: {fileID: 0}
 --- !u!1 &319169563
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +855,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 280250994}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayCredits
+        m_MethodName: LoadCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

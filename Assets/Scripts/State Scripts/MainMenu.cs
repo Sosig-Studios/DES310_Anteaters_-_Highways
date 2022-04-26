@@ -25,6 +25,10 @@ public class MainMenu : MonoBehaviour
         levelSelect.SetActive(false);
     }
 
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("CreditsScreen");
+    }
 
 
 
