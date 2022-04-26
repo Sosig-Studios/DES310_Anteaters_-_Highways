@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelStateMenu : MonoBehaviour
 {
@@ -11,8 +12,11 @@ public class LevelStateMenu : MonoBehaviour
     public GameObject hudUI;
     public AudioSource levelMusic;
 
+    public Image hudPauseImage;
+
     private void Start()
     {
+        hudPauseImage.enabled = false;
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
     }
@@ -27,6 +31,7 @@ public class LevelStateMenu : MonoBehaviour
 
     public void Resume()
     {
+        hudPauseImage.enabled = false;
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -48,6 +53,8 @@ public class LevelStateMenu : MonoBehaviour
 
     void Pause()
     {
+        //set hud pause to active
+        hudPauseImage.enabled = true;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
