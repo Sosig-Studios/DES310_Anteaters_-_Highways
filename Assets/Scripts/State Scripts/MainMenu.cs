@@ -30,6 +30,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("CreditsScreen");
     }
 
-
+    public void LoadHTP()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
 
 }
