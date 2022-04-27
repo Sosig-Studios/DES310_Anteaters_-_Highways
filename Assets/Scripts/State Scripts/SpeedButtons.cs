@@ -14,6 +14,22 @@ public class SpeedButtons : MonoBehaviour
         //Debug.Log("Speed Modifier = 1");
     }
 
+    void Update()
+    {
+        if (Input.GetKey("1"))
+        {
+            setNormalSpeed();
+        }
+        if (Input.GetKey("2"))
+        {
+            setFastSpeed();
+        }
+        if (Input.GetKey("3"))
+        {
+            setMaxSpeed();
+        }
+    }
+
     public void setNormalSpeed()
     {
         speedModifier = 1;
