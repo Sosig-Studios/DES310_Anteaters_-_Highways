@@ -13,6 +13,8 @@ public class AntEaterCollision : MonoBehaviour
     public AudioClip sfxHit;
     public AudioClip sfxEat;
 
+    [SerializeField]
+    float deathDealyTime = 7f;
     void Start()
     {
  
@@ -62,6 +64,16 @@ public class AntEaterCollision : MonoBehaviour
 
     void loseLevel()
     {
+        StartCoroutine("DeathSequence");
+     
+    }
+
+    IEnumerator DeathSequence()
+    {
+        GetComponent<deathCollect>().isDead = true;
+        yield return new WaitForSeconds(deathDealyTime);
         SceneManager.LoadScene("LoseState"); //load win state 
     }
+
+
 }
