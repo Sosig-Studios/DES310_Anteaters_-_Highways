@@ -35,11 +35,9 @@ public class deathCamera : MonoBehaviour
         virtualCam.LookAt = followTarget;
         float t = Mathf.PingPong(Time.time, duration) / duration;
         sceneCam.backgroundColor = Color.Lerp(normalBackground, deathBackground, t);
-        yield return new WaitForSeconds(2.2f);
+        yield return new WaitForSeconds(1f);
 
         virtualCam.Follow = followTarget;
-        killedAnteater.GetComponent<Animation>().wrapMode = WrapMode.Once;
-        killedAnteater.GetComponent<Animation>().Play();
     }
 
 

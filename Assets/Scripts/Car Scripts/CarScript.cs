@@ -14,7 +14,9 @@ public class CarScript : MonoBehaviour
     private float maxSpeed;
 
     bool inTraffic = false;
-    
+
+    public Animation truckBrake;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,8 @@ public class CarScript : MonoBehaviour
 
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
+
+        truckBrake = GetComponent<Animation>();
     }
 
     // Update is called once per frame
@@ -67,6 +71,7 @@ public class CarScript : MonoBehaviour
 
     void OnMouseDown()
     {
+        truckBrake.Play();
         StartCoroutine(SlowDownCar());
         //potential fix: - if this takes less than a second start speed up car
     }
@@ -85,6 +90,7 @@ public class CarScript : MonoBehaviour
             setSpeed -= 1;
             yield return new WaitForSeconds(0.1f);
             Debug.Log("set speed: " + setSpeed);
+            truckBrake.Stop();
         }
 
     }
@@ -93,6 +99,7 @@ public class CarScript : MonoBehaviour
     {
         while (setSpeed != newSpeed)
         {
+            
             yield return new WaitForSeconds(0.05f);
             setSpeed += 1;
             Debug.Log("set speed: " + setSpeed);

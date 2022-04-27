@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6244513234196119058}
   - component: {fileID: -2093880547430700085}
   - component: {fileID: -7598089920061406163}
+  - component: {fileID: -269745663167810313}
   m_Layer: 8
   m_Name: BlueTruck
   m_TagString: Car
@@ -76,8 +77,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b001d261ee5674d96e67dfdb091e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedButtonsScript: {fileID: 0}
   waypoints: []
-  speed: 5
+  setSpeed: 0
+  truckBrake: {fileID: 0}
 --- !u!114 &6244513234196119058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +208,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!111 &-269745663167810313
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348774803667469238}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 1827226128182048838, guid: c30b066f7b27f5a4589e8c18daed8209, type: 3}
+  m_Animations:
+  - {fileID: 1827226128182048838, guid: c30b066f7b27f5a4589e8c18daed8209, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3617057073043861976
 GameObject:
   m_ObjectHideFlags: 0
