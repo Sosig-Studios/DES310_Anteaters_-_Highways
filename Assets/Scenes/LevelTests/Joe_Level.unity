@@ -1164,7 +1164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: speed
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8654347780135988505, guid: 6e9582e58bca55943895df35cf0d8cf9, type: 3}
       propertyPath: speedButtonsScript
@@ -3068,7 +3068,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2506286831539340005, guid: 4c3d5800ea93449448b5715f9713e174, type: 3}
       propertyPath: antEaterNumMax
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3934349863968652578, guid: 4c3d5800ea93449448b5715f9713e174, type: 3}
       propertyPath: m_Name
@@ -5621,7 +5621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1339906242
 Transform:
   m_ObjectHideFlags: 0
@@ -5846,7 +5846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1399217026
 Transform:
   m_ObjectHideFlags: 0
@@ -8963,6 +8963,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -15.1497
       objectReference: {fileID: 0}
+    - target: {fileID: 2067122023621614622, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: currentLevelNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3243436742931119429, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.9544772
@@ -9190,6 +9194,14 @@ PrefabInstance:
     - target: {fileID: 5599109566236152691, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: maxCounter
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800989297275639662, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: currentLevelNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568130088127169925, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: currentLevelNumber
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7641244706548194873, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: speedModifier

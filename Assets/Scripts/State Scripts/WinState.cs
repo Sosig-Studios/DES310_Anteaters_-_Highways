@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class WinState : MonoBehaviour
 {
+    public LevelInformation levelInformationScript;
+
     public Image levelScrenshotImage;
     public Sprite levelScreenShot1Image;
     public Sprite levelScreenShot2Image;
@@ -36,6 +38,10 @@ public class WinState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("working");
+        Debug.Log(currentLevelNumber);
+        currentLevelNumber = levelInformationScript.getCurrentLevelNumber();
+        Debug.Log(currentLevelNumber);
         switch (currentLevelNumber)
         {
             case 1:

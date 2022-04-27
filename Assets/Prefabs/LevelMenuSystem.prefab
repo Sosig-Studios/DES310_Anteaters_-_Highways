@@ -1222,6 +1222,7 @@ GameObject:
   - component: {fileID: 3243436743942727020}
   - component: {fileID: 3243436743942727021}
   - component: {fileID: 3243436743942727017}
+  - component: {fileID: 5800989297275639662}
   m_Layer: 5
   m_Name: LevelMenuSystem
   m_TagString: Untagged
@@ -1331,6 +1332,19 @@ MonoBehaviour:
   hudUI: {fileID: 3243436744917970252}
   levelMusic: {fileID: 4161730280882828574}
   hudPauseImage: {fileID: 1320383548494640131}
+--- !u!114 &5800989297275639662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243436743942727010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fa3960ee0469d4c8f899cd6cce623e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevelNumber: 0
 --- !u!1 &3243436743997067809
 GameObject:
   m_ObjectHideFlags: 0
