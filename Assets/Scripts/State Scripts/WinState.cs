@@ -6,13 +6,14 @@ using UnityEngine.UI;
 
 public class WinState : MonoBehaviour
 {
-    public LevelInformation levelInformationScript;
+
+    public static int currentLevelNumber;
 
     public Image levelScrenshotImage;
     public Sprite levelScreenShot1Image;
     public Sprite levelScreenShot2Image;
 
-    private int currentLevelNumber;
+    
 
     public void LoadMenu()
     {
@@ -32,15 +33,8 @@ public class WinState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentLevelNumber = 1;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        //currentLevelNumber = 0;
         Debug.Log("working");
-        Debug.Log(currentLevelNumber);
-        currentLevelNumber = levelInformationScript.getCurrentLevelNumber();
         Debug.Log(currentLevelNumber);
         switch (currentLevelNumber)
         {
@@ -55,5 +49,11 @@ public class WinState : MonoBehaviour
                 levelScrenshotImage.sprite = levelScreenShot1Image;
                 break;
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }
