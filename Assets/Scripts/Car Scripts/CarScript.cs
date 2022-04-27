@@ -15,10 +15,38 @@ public class CarScript : MonoBehaviour
 
     bool inTraffic = false;
     private bool carAlive = true;
-    
+
+    //timer
+    bool stopWatchActive = false;
+    float currentTime;
+
+    void StartStopWatchTimer()
+    {
+        stopWatchActive = true;
+    }
+
+    void StopStopWatchTimer()
+    {
+        stopWatchActive = false;
+    }
+
+    void UpdateStopWatchTimer()
+    {
+        if (stopWatchActive)
+        {
+            currentTime += Time.deltaTime;
+        }
+    }
+
+    void SetStopWatchTimer
+    {
+        currentTime = 0;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        SetStopWatchTimer();
         carAlive = true;
         newSpeed = setSpeed;
         //Debug.Log(speedButtonsScript.speedModifier);
@@ -31,6 +59,7 @@ public class CarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateStopWatchTimer();
         maxSpeed = newSpeed * speedButtonsScript.speedModifier;
         DeleteCar();
         if(carAlive)
