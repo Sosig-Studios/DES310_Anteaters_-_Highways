@@ -17,6 +17,7 @@ public class LevelStateMenu : MonoBehaviour
     private void Start()
     {
         hudPauseImage.enabled = false;
+        hudUI.SetActive(true);
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
     }
