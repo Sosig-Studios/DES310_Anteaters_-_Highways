@@ -27,11 +27,26 @@ public class MainMenu : MonoBehaviour
 
     public void LoadCredits()
     {
-        SceneManager.LoadScene("CreditsScreen");
+        //SceneManager.LoadScene("CreditsScreen");
+        StartCoroutine(CreditLoader());
     }
 
     public void LoadHTP()
     {
+        //SceneManager.LoadScene("HowToPlay");
+        StartCoroutine(HTPLoader());
+    }
+
+
+    IEnumerator CreditLoader()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("CreditsScreen");
+    }
+
+    IEnumerator HTPLoader()
+    {
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("HowToPlay");
     }
 
