@@ -12,6 +12,7 @@ public class LevelInformation : MonoBehaviour
     void Start()
     {
         WinState.currentLevelNumber = currentLevelNumber;
+        LoseState.currentLevelNumber = currentLevelNumber;
     }
 
     // Update is called once per frame
