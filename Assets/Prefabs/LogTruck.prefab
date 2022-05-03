@@ -158,10 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b001d261ee5674d96e67dfdb091e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carHorn: {fileID: 3460749684878956678}
   speedButtonsScript: {fileID: 0}
   waypoints: []
   setSpeed: 0
-  truckBrake: {fileID: 0}
 --- !u!114 &4710311388135852761
 MonoBehaviour:
   m_ObjectHideFlags: 0
