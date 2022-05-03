@@ -15,6 +15,9 @@ public class AntEaterCollision : MonoBehaviour
 
     [SerializeField]
     float deathDealyTime = 7f;
+
+    public bool HitLeft;
+
     void Start()
     {
  
@@ -29,6 +32,7 @@ public class AntEaterCollision : MonoBehaviour
             patrollerScript.speed = 0;
             Debug.Log(transform.position);
             loseLevel();
+            
         }
 
         if (collisionInfo.gameObject.tag == "Anthill")
@@ -64,8 +68,19 @@ public class AntEaterCollision : MonoBehaviour
 
     void loseLevel()
     {
+
         StartCoroutine("DeathSequence");
-     
+        
+        if(HitLeft)
+        {
+            //player left death sequence
+            Debug.Log("Play Left Death Sequence");
+        }
+        else
+        {
+            //player right death sequence
+            Debug.Log("Play Right Death Sequence");
+        }
     }
 
     IEnumerator DeathSequence()
