@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class LoseState : MonoBehaviour
 {
     public static int currentLevelNumber;
@@ -30,6 +31,7 @@ public class LoseState : MonoBehaviour
                 break;
             default:
                 Debug.Log("not working");
+                Debug.Log(currentLevelNumber);
                 break;
         }
     }
