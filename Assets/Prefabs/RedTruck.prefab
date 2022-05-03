@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1715656283974033574}
   - component: {fileID: 7497005078971723201}
   - component: {fileID: 3268309847628692100}
+  - component: {fileID: 3261961488147941300}
   m_Layer: 8
   m_Name: RedTruck
   m_TagString: Car
@@ -75,9 +76,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b001d261ee5674d96e67dfdb091e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedButtonsScript: {fileID: 0}
   waypoints:
   - {fileID: 0}
-  speed: 5
+  setSpeed: 0
+  truckBrake: {fileID: 0}
 --- !u!114 &7497005078971723201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +112,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!111 &3261961488147941300
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949589821613497840}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 1827226128182048838, guid: 4952ea4c1f86275498898dac3a43573c, type: 3}
+  m_Animations:
+  - {fileID: 1827226128182048838, guid: 4952ea4c1f86275498898dac3a43573c, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5489512121247020642
 GameObject:
   m_ObjectHideFlags: 0

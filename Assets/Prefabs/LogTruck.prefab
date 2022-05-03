@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4710311388135852761}
   - component: {fileID: 1466406868563354710}
   - component: {fileID: 3460749684878956678}
+  - component: {fileID: 9048539773768267610}
   m_Layer: 0
   m_Name: LogTruck
   m_TagString: Untagged
@@ -157,8 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b001d261ee5674d96e67dfdb091e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedButtonsScript: {fileID: 0}
   waypoints: []
-  speed: 5
+  setSpeed: 0
+  truckBrake: {fileID: 0}
 --- !u!114 &4710311388135852761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +289,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!111 &9048539773768267610
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526403866989221576}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 1827226128182048838, guid: f5e1b565965974245bb7b12df0eb4561, type: 3}
+  m_Animations:
+  - {fileID: 1827226128182048838, guid: f5e1b565965974245bb7b12df0eb4561, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &7317655947186965470
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 public class AntEaterCollision : MonoBehaviour
 {
     public AnteaterScript patrollerScript;
+    public AntEaterCounter antEaterCounterScript;
     public AudioSource audioSource;
    
    
     public AudioClip sfxHit;
     public AudioClip sfxEat;
 
+    [SerializeField]
+    float deathDealyTime = 7f;
     void Start()
     {
  
@@ -34,6 +37,7 @@ public class AntEaterCollision : MonoBehaviour
             Debug.Log("Anteater Hit Anthill");
             StartCoroutine(eatAnthill(collisionInfo));
             GetComponent<AudioSource>().Play();
+            antEaterCounterScript.setCounterDown();
         }
 
 
@@ -60,6 +64,16 @@ public class AntEaterCollision : MonoBehaviour
 
     void loseLevel()
     {
+        StartCoroutine("DeathSequence");
+     
+    }
+
+    IEnumerator DeathSequence()
+    {
+        GetComponent<deathCollect>().isDead = true;
+        yield return new WaitForSeconds(deathDealyTime);
         SceneManager.LoadScene("LoseState"); //load win state 
     }
+
+
 }

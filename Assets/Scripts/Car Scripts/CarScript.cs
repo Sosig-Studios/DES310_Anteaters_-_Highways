@@ -14,31 +14,44 @@ public class CarScript : MonoBehaviour
     private float maxSpeed;
 
     bool inTraffic = false;
+    private bool carAlive = true;
+    Animation brakeAnim;
     
     // Start is called before the first frame update
     void Start()
     {
+        carAlive = true;
         newSpeed = setSpeed;
-        Debug.Log(speedButtonsScript.speedModifier);
-        Debug.Log(setSpeed);
+        //Debug.Log(speedButtonsScript.speedModifier);
+        //Debug.Log(setSpeed);
 
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
+
+        brakeAnim = GetComponent<Animation>();
     }
 
     // Update is called once per frame
     void Update()
     {
         maxSpeed = newSpeed * speedButtonsScript.speedModifier;
-
-        TrafficDetect();
-        distance = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
-        if (distance < 1f)
+        DeleteCar();
+        if(carAlive)
         {
-            IncreaseIndex();
+            TrafficDetect();
+            distance = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
+            if (distance < 1f)
+            {
+                IncreaseIndex();
+            }
+            if (!inTraffic)
+            {
+                Patrol();
+            }
         }
-        if(!inTraffic)
-            Patrol();
+    
+        
+            
     }
 
     void Patrol()
@@ -49,18 +62,21 @@ public class CarScript : MonoBehaviour
     void IncreaseIndex()
     {
         waypointIndex++;
-        if (waypointIndex >= waypoints.Length)
+        if (waypointIndex < waypoints.Length)
         {
-            waypointIndex = 0;
+            //waypointIndex = 0;
+            transform.LookAt(waypoints[waypointIndex].position);
         }
-        transform.LookAt(waypoints[waypointIndex].position);
+        
     }
 
     void DeleteCar()
     {
         if(waypointIndex >= waypoints.Length)
         {
-
+            //Debug.Log("Destroy Car Hit");
+            Object.Destroy(this.gameObject);
+            carAlive = false;
         }
     }
 
@@ -73,7 +89,7 @@ public class CarScript : MonoBehaviour
 
     void OnMouseUp()
     {
-        Debug.Log("Mouse Up");
+        //Debug.Log("Mouse Up");
 
         StartCoroutine(SpeedUpCar());
     }
@@ -82,9 +98,10 @@ public class CarScript : MonoBehaviour
     {
         while (setSpeed != 0)
         {
+            brakeAnim.Play();
             setSpeed -= 1;
             yield return new WaitForSeconds(0.1f);
-            Debug.Log("set speed: " + setSpeed);
+            //Debug.Log("set speed: " + setSpeed);
         }
 
     }
@@ -93,9 +110,10 @@ public class CarScript : MonoBehaviour
     {
         while (setSpeed != newSpeed)
         {
+            brakeAnim.Stop();
             yield return new WaitForSeconds(0.05f);
             setSpeed += 1;
-            Debug.Log("set speed: " + setSpeed);
+            //Debug.Log("set speed: " + setSpeed);
         }
 
         /*
@@ -113,8 +131,8 @@ public class CarScript : MonoBehaviour
         var sdist = 3.0f;
 
         RaycastHit hit1;
-        RaycastHit hit2;
-        RaycastHit hit3;
+        //RaycastHit hit2; //error hit 2 and 3 never used
+        //RaycastHit hit3;
         var forward = transform.TransformDirection(Vector3.forward);
         var left = transform.TransformDirection(Vector3.left);
         var right = transform.TransformDirection(Vector3.right);
@@ -126,11 +144,12 @@ public class CarScript : MonoBehaviour
         if (Physics.Raycast(transform.position, forward, out hit1, dist, mask))
         {
             inTraffic = true;
-
+            brakeAnim.Play();
         }
         else
         {
             inTraffic = false;
+            brakeAnim.Stop();
         }
 
 

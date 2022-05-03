@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnteaterScript : MonoBehaviour
 {
+    public SpeedButtons speedButtonsScript;
     public Transform[] waypoints;
     public int speed;
 
@@ -30,7 +31,7 @@ public class AnteaterScript : MonoBehaviour
 
     void Patrol()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * speed * speedButtonsScript.speedModifier * Time.deltaTime);
     }
 
     void IncreaseIndex()

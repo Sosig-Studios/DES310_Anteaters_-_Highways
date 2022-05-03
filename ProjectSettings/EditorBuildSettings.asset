@@ -6,24 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/State Scenes/SplashScreen.unity
+    guid: e8586650407de2342a14bad03f989482
+  - enabled: 1
+    path: Assets/Scenes/State Scenes/MainMenu.unity
     guid: 86cd29cf50ef0d04bbbbf160cc2d5bac
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/WinState.unity
+    path: Assets/Scenes/State Scenes/WinState.unity
     guid: 07aa1f575b69df745af47f16ffb9a603
   - enabled: 1
-    path: Assets/Scenes/LoseState.unity
+    path: Assets/Scenes/State Scenes/LoseState.unity
     guid: 367b3992122c6494a80552816511cdee
   - enabled: 1
-    path: Assets/Scenes/LVL1.unity
+    path: Assets/Scenes/Actual Levels/LVL1.unity
     guid: a6346b3fc38e4f2439e3d9655cd854bb
   - enabled: 1
-    path: Assets/Scenes/LVL2.unity
+    path: Assets/Scenes/Actual Levels/LVL2.unity
     guid: 47a8c8a735e1e5e4eab1f844252bbf55
   - enabled: 1
-    path: Assets/Scenes/LevelSelect.unity
+    path: Assets/Scenes/State Scenes/LevelSelect.unity
     guid: 6e528213b48933e4c8a819f708abb3c3
+  - enabled: 1
+    path: Assets/Scenes/State Scenes/CreditsScreen.unity
+    guid: 747508341a458c6428d95aaed49b25c2
+  - enabled: 1
+    path: Assets/Scenes/State Scenes/HowToPlay.unity
+    guid: f8c3f2c505e711d418606c175e180c78
   m_configObjects: {}
