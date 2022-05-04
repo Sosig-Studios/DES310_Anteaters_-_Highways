@@ -24,8 +24,27 @@ public class WinState : MonoBehaviour
     public void NextLevel()
     {
         Debug.Log("To Next Level");
-        //load next level...
-        SceneManager.LoadScene("LVL2");
+        switch(currentLevelNumber)
+        {
+            case 1:
+                //if level one move to level 2
+                SceneManager.LoadScene("LVL2");
+                break;
+            case 2:
+                //if level 2 move to level 3
+                SceneManager.LoadScene("LVL3");
+                break;
+            case 3:
+                //if level move to credits
+                SceneManager.LoadScene("CreditsScreen");
+                break;
+            default:
+                Debug.Log("not working");
+                Debug.Log(currentLevelNumber);
+                break;
+
+
+        }
     }
 
     public void setCurrentLevelNumber(int i) { currentLevelNumber = i; }
