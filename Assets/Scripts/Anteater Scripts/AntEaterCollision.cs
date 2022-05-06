@@ -14,7 +14,7 @@ public class AntEaterCollision : MonoBehaviour
     public AudioClip sfxEat;
 
     [SerializeField]
-    float deathDealyTime = 7f;
+    float deathDealyTime = 4f;
 
     public bool HitLeft;
 
@@ -27,18 +27,28 @@ public class AntEaterCollision : MonoBehaviour
     {
         if (collisionInfo.gameObject.tag == "Car")
         {
+            GameObject.FindGameObjectWithTag("Level Music").GetComponent<AudioSource>().Pause();
+            foreach(GameObject a in GameObject.FindGameObjectsWithTag("SFX"))
+            {
+                a.GetComponent<AudioSource>().Pause();
+            }
             audioSource.PlayOneShot(sfxHit);
-            Debug.Log("Anteater Hit Car");
             patrollerScript.speed = 0;
-            Debug.Log(transform.position);
             loseLevel();
-            
+            foreach(GameObject g in GameObject.FindGameObjectsWithTag("Car"))
+            {
+                g.GetComponent<CarScript>().setSpeed = 0;
+            }
+            foreach (GameObject g in GameObject.FindGameObjectsWithTag("AntEater"))
+            {
+                g.GetComponent<AnteaterScript>().speed = 0;
+            }
+
         }
 
         if (collisionInfo.gameObject.tag == "Anthill")
         {
             audioSource.PlayOneShot(sfxEat);
-            Debug.Log("Anteater Hit Anthill");
             StartCoroutine(eatAnthill(collisionInfo));
             GetComponent<AudioSource>().Play();
             antEaterCounterScript.setCounterDown();
@@ -74,12 +84,10 @@ public class AntEaterCollision : MonoBehaviour
         if(HitLeft)
         {
             //player left death sequence
-            Debug.Log("Play Left Death Sequence");
         }
         else
         {
             //player right death sequence
-            Debug.Log("Play Right Death Sequence");
         }
     }
 

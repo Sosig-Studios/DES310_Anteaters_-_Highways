@@ -45,10 +45,12 @@ public class LevelStateMenu : MonoBehaviour
         if (GameIsPaused)
         {
             Resume();
+            GameObject.FindGameObjectWithTag("Level Music").GetComponent<AudioSource>().Play();
         }
         else
         {
             Pause();
+            GameObject.FindGameObjectWithTag("Level Music").GetComponent<AudioSource>().Pause();
         }
     }
 
@@ -64,19 +66,16 @@ public class LevelStateMenu : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        Debug.Log("Load Menu");
         SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quit Game");
         Application.Quit();
     }
 
     public void RetryGame()
     {
-        Debug.Log("Retry Game");
         Time.timeScale = 1f;
         SceneManager.LoadScene("FPlayable_LVL1");
     }
@@ -84,7 +83,6 @@ public class LevelStateMenu : MonoBehaviour
     public void LoadSettingsMenu()
     {
 
-        Debug.Log("Settings menu hit");
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(true);
         Time.timeScale = 0f;
@@ -93,8 +91,6 @@ public class LevelStateMenu : MonoBehaviour
 
     public void LoadHowToPlayMenu()
     {
-
-        Debug.Log("How To Play Menu Hit");
-
+        SceneManager.LoadScene("HowToPlay");
     }
 }

@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class WinState : MonoBehaviour
 {
 
-    public static int currentLevelNumber;
 
     public Image levelScrenshotImage;
     public Sprite levelScreenShot1Image;
@@ -23,52 +22,37 @@ public class WinState : MonoBehaviour
 
     public void NextLevel()
     {
-        Debug.Log("To Next Level");
-        switch(currentLevelNumber)
+        var prev = "";
+        if (GameObject.FindGameObjectWithTag("prev scene") != null)
         {
-            case 1:
+            prev = GameObject.FindGameObjectWithTag("prev scene").GetComponent<PrevScene>().prevScene;
+            SceneManager.LoadScene(prev);
+        }
+        else
+            SceneManager.LoadScene("LevelSelect");
+        switch (prev)
+        {
+            case "LVL1":
                 //if level one move to level 2
                 SceneManager.LoadScene("LVL2");
                 break;
-            case 2:
+            case "LVL2":
                 //if level 2 move to level 3
                 SceneManager.LoadScene("LVL3");
                 break;
-            case 3:
+            case "LVL3":
                 //if level move to credits
                 SceneManager.LoadScene("CreditsScreen");
                 break;
             default:
                 Debug.Log("not working");
-                Debug.Log(currentLevelNumber);
                 break;
 
 
         }
     }
 
-    public void setCurrentLevelNumber(int i) { currentLevelNumber = i; }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //currentLevelNumber = 0;
-        Debug.Log("working");
-        Debug.Log(currentLevelNumber);
-        switch (currentLevelNumber)
-        {
-            case 1:
-                levelScrenshotImage.sprite = levelScreenShot1Image;
-                break;
-            case 2:
-                levelScrenshotImage.sprite = levelScreenShot2Image;
-                break;
-            default:
-                // code block
-                levelScrenshotImage.sprite = levelScreenShot1Image;
-                break;
-        }
-    }
+    
 
     // Update is called once per frame
     void Update()

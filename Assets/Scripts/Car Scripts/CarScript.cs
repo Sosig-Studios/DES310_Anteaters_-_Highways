@@ -23,8 +23,8 @@ public class CarScript : MonoBehaviour
     {
         carAlive = true;
         newSpeed = setSpeed;
-        //Debug.Log(speedButtonsScript.speedModifier);
-        //Debug.Log(setSpeed);
+        carHorn = GetComponent<AudioSource>();
+        speedButtonsScript = GameObject.FindGameObjectWithTag("HUD").GetComponent<SpeedButtons>();
 
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
@@ -50,8 +50,9 @@ public class CarScript : MonoBehaviour
                 Patrol();
             }
         }
-    
-        
+
+        if (waypointIndex == waypoints.Length)
+            Destroy(this);
             
     }
 
@@ -75,7 +76,6 @@ public class CarScript : MonoBehaviour
     {
         if(waypointIndex >= waypoints.Length)
         {
-            //Debug.Log("Destroy Car Hit");
             Object.Destroy(this.gameObject);
             carAlive = false;
         }
@@ -91,7 +91,6 @@ public class CarScript : MonoBehaviour
 
     void OnMouseUp()
     {
-        //Debug.Log("Mouse Up");
 
         StartCoroutine(SpeedUpCar());
     }
@@ -103,7 +102,6 @@ public class CarScript : MonoBehaviour
             brakeAnim.Play();
             setSpeed -= 1;
             yield return new WaitForSeconds(0.1f);
-            //Debug.Log("set speed: " + setSpeed);
         }
 
     }
@@ -115,7 +113,6 @@ public class CarScript : MonoBehaviour
             brakeAnim.Stop();
             yield return new WaitForSeconds(0.05f);
             setSpeed += 1;
-            //Debug.Log("set speed: " + setSpeed);
         }
 
         /*
@@ -136,11 +133,6 @@ public class CarScript : MonoBehaviour
         //RaycastHit hit2; //error hit 2 and 3 never used
         //RaycastHit hit3;
         var forward = transform.TransformDirection(Vector3.forward);
-        var left = transform.TransformDirection(Vector3.left);
-        var right = transform.TransformDirection(Vector3.right);
-        Debug.DrawRay(transform.position, forward * dist, Color.green);
-        Debug.DrawRay(transform.position, left * sdist, Color.green);
-        Debug.DrawRay(transform.position, right * sdist, Color.green);
 
 
         if (Physics.Raycast(transform.position, forward, out hit1, dist, mask))
