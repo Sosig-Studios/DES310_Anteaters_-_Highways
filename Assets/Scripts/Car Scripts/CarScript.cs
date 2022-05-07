@@ -17,7 +17,8 @@ public class CarScript : MonoBehaviour
     bool inTraffic = false;
     private bool carAlive = true;
     Animation brakeAnim;
-    
+
+    ParticleSystem[] p;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class CarScript : MonoBehaviour
         carHorn = GetComponent<AudioSource>();
         speedButtonsScript = GameObject.FindGameObjectWithTag("HUD").GetComponent<SpeedButtons>();
 
+        p = GetComponentsInChildren<ParticleSystem>();
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
 
@@ -53,7 +55,23 @@ public class CarScript : MonoBehaviour
 
         if (waypointIndex == waypoints.Length)
             Destroy(this);
-            
+
+
+        if (setSpeed == 0)
+        {
+            foreach (ParticleSystem ps in p)
+            {
+                ps.Stop();
+            }
+        }
+        if (setSpeed != 0)
+        {
+            foreach (ParticleSystem ps in p)
+            {
+                ps.Play();
+            }
+        }
+
     }
 
     void Patrol()
