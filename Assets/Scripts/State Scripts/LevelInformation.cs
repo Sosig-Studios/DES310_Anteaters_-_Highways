@@ -11,8 +11,6 @@ public class LevelInformation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        WinState.currentLevelNumber = currentLevelNumber;
-        LoseState.currentLevelNumber = currentLevelNumber;
     }
 
     // Update is called once per frame

@@ -19,7 +19,10 @@ public class deathCollect : MonoBehaviour
             gameManager.GetComponent<deathCamera>().DeathScreen();
             anteater = gameManager.GetComponent<deathCamera>().killedAnteater;
             anteater.GetComponent<MeshRenderer>().material = deadMaterial;
-            FindObjectOfType<Light>().enabled = false;
+            foreach(Light l in FindObjectsOfType<Light>())
+            {
+                l.enabled = false;
+            }
         }
     }
 }

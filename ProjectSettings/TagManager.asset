@@ -11,6 +11,10 @@ TagManager:
   - TrafficCollider
   - CarAlert
   - CarAlertImage
+  - HUD
+  - Level Music
+  - prev scene
+  - SFX
   layers:
   - Default
   - TransparentFX
