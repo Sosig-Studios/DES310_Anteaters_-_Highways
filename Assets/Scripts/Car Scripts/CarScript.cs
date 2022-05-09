@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CarScript : MonoBehaviour
 {
+    public AudioSource carHorn;
     public SpeedButtons speedButtonsScript;
     public Transform[] waypoints;
     public int setSpeed;
@@ -83,6 +84,7 @@ public class CarScript : MonoBehaviour
 
     void OnMouseDown()
     {
+        carHorn.Play();
         StartCoroutine(SlowDownCar());
         //potential fix: - if this takes less than a second start speed up car
     }
