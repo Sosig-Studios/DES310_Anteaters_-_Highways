@@ -17,7 +17,7 @@ public class CarAlert : MonoBehaviour
 
     public Vector3 imagePosition;
     public Vector3 imageScale;
-    public float despawnTime;
+    public float despawnTime = 1;
     private bool isSpawned = false;
 
     void CollisionDetect()
@@ -27,13 +27,10 @@ public class CarAlert : MonoBehaviour
         var dist = 5.0f;
 
         RaycastHit hit1;
-        Debug.DrawRay(transform.position, -Vector3.forward * dist, Color.green);
+        Debug.DrawRay(transform.position, Vector3.forward * dist, Color.green); ;
 
         if (Physics.Raycast(transform.position, -Vector3.forward, out hit1, dist, mask))
         {
-
-           //  Debug.Log("Car hit bx alert");
-           
             if(!isSpawned)
             {
                 StartCoroutine(CarAlertPopUp());
@@ -46,18 +43,9 @@ public class CarAlert : MonoBehaviour
     IEnumerator CarAlertPopUp()
     {
         isSpawned = true;
-        var createImage = Instantiate(popUp) as GameObject;
-        createImage.transform.SetParent(HUD.transform, false);
-        createImage.transform.position += imagePosition;
-        createImage.transform.localScale += imageScale;
-        //
+        popUp.SetActive(true);
         yield return new WaitForSeconds(despawnTime);
-        //delete spawn
-        GameObject[] carAlertImageObjects = GameObject.FindGameObjectsWithTag("CarAlertImage");
-        for (int i = 0; i < carAlertImageObjects.Length; i++)
-        {
-            Destroy(carAlertImageObjects[i]);
-        }
+        popUp.SetActive(false);
 
         isSpawned = false; // reset for next car
     }
@@ -66,6 +54,7 @@ public class CarAlert : MonoBehaviour
 
     void Start()
     {
+        popUp.SetActive(false);
     }
 
     void Update()

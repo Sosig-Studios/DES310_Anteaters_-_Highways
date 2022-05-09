@@ -2,20 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class LoseState : MonoBehaviour
 {
-
+    public static int currentLevelNumber;
 
     public void Retry()
     {
-        Debug.Log("Retry Game");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("LevelSelect");//takes player back to level 1...
-    } 
+        if (GameObject.FindGameObjectWithTag("prev scene") != null)
+        {
+            var prev = GameObject.FindGameObjectWithTag("prev scene").GetComponent<PrevScene>().prevScene;
+            SceneManager.LoadScene(prev);
+        }
+        else
+            SceneManager.LoadScene("LevelSelect");
+
+    }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");//goes back to main menu
 
     }
+
+    
 }

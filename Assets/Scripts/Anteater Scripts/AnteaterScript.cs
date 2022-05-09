@@ -14,6 +14,7 @@ public class AnteaterScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speedButtonsScript = GameObject.FindGameObjectWithTag("HUD").GetComponent<SpeedButtons>();
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
     }

@@ -7,6 +7,10 @@ public class SpeedButtons : MonoBehaviour
     //private float speedModifier;
     public int speedModifier;
 
+    public float NormalSpeed = 1;
+    public float FastSpeed = 1.25f;
+    public float MaxSpeed = 1.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,24 +32,28 @@ public class SpeedButtons : MonoBehaviour
         {
             setMaxSpeed();
         }
+        Debug.Log(Time.timeScale);
     }
 
     public void setNormalSpeed()
     {
-        speedModifier = 1;
+        //speedModifier = 1;
         //Debug.Log("Speed Modifier = 1");
+        Time.timeScale = NormalSpeed;
     }
 
     public void setFastSpeed()
     {
-        speedModifier = 2;
+        //speedModifier = 2;
         //Debug.Log("Speed Modifier = 2");
+        Time.timeScale = FastSpeed;
     }
 
     public void setMaxSpeed()
     {
-        speedModifier = 3;
+        //speedModifier = 3;
         //Debug.Log("Speed Modifier = 3");
+        Time.timeScale = MaxSpeed;
     }
 
     public int getSpeedModifier() { return speedModifier; }
