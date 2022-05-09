@@ -8,7 +8,7 @@ public class CarScript : MonoBehaviour
     public SpeedButtons speedButtonsScript;
     public Transform[] waypoints;
     public int setSpeed;
-    private int newSpeed;
+    private int currentSpeed;
 
     private int waypointIndex;
     private float distance;
@@ -22,7 +22,7 @@ public class CarScript : MonoBehaviour
     void Start()
     {
         carAlive = true;
-        newSpeed = setSpeed;
+        currentSpeed = setSpeed;
         carHorn = GetComponent<AudioSource>();
         speedButtonsScript = GameObject.FindGameObjectWithTag("HUD").GetComponent<SpeedButtons>();
 
@@ -35,7 +35,7 @@ public class CarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        maxSpeed = newSpeed * speedButtonsScript.speedModifier;
+        maxSpeed = setSpeed * speedButtonsScript.speedModifier;
         DeleteCar();
         if(carAlive)
         {
@@ -58,7 +58,7 @@ public class CarScript : MonoBehaviour
 
     void Patrol()
     {
-        transform.Translate(Vector3.forward * setSpeed * speedButtonsScript.speedModifier * Time.deltaTime);
+        transform.Translate(Vector3.forward * currentSpeed * speedButtonsScript.speedModifier * Time.deltaTime);
     }
 
     void IncreaseIndex()
@@ -97,10 +97,10 @@ public class CarScript : MonoBehaviour
 
     IEnumerator SlowDownCar()
     {
-        while (setSpeed != 0)
+        while (currentSpeed != 0)
         {
             brakeAnim.Play();
-            setSpeed -= 1;
+            currentSpeed -= 1;
             yield return new WaitForSeconds(0.1f);
         }
 
@@ -108,18 +108,15 @@ public class CarScript : MonoBehaviour
 
     IEnumerator SpeedUpCar()
     {
-        while (setSpeed != newSpeed)
+        while (currentSpeed != setSpeed)
         {
             brakeAnim.Stop();
             yield return new WaitForSeconds(0.05f);
-            setSpeed += 1;
+            currentSpeed += 1;
         }
 
-        /*
-         i dont know how to get on hold working
-        i think when you click on unity it doesnt always recognise the mouse as up, thats the only explanation i can think of
-         */
     }
+
     void TrafficDetect()
     {
 
@@ -149,6 +146,18 @@ public class CarScript : MonoBehaviour
 
     }
 
+    public void AntEaterHit()
+    {
+        StartCoroutine(StopCar());
+    }
 
+    IEnumerator StopCar()
+    {
+        currentSpeed = -7;
+        yield return new WaitForSeconds(0.05f);
+        currentSpeed = 7;
+        yield return new WaitForSeconds(0.2f);
+        currentSpeed = 0;
+    }
 }
 
