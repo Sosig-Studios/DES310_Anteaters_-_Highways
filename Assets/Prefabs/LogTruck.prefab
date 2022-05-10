@@ -28993,7 +28993,7 @@ MonoBehaviour:
   carHorn: {fileID: 3460749684878956678}
   speedButtonsScript: {fileID: 0}
   waypoints: []
-  setSpeed: 0
+  setSpeed: 4
 --- !u!114 &4710311388135852761
 MonoBehaviour:
   m_ObjectHideFlags: 0
