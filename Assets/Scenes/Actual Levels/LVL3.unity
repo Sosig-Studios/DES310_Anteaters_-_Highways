@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 196428810e3891d4599bcf5c4dedd1b7, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: d13176bd480e85e46b0f7156e651c868, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2038,6 +2038,10 @@ PrefabInstance:
       propertyPath: speed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 7
@@ -4351,6 +4355,10 @@ PrefabInstance:
       propertyPath: speed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 4
@@ -9166,6 +9174,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -9775,6 +9787,10 @@ PrefabInstance:
       propertyPath: speed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 7
@@ -11316,6 +11332,10 @@ PrefabInstance:
       propertyPath: speed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 4
@@ -14073,6 +14093,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -15866,6 +15890,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -16256,6 +16284,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+--- !u!114 &1529019034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7641244706548194873, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+  m_PrefabInstance: {fileID: 1529019033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611173b8cf88be44e98184cc5950aa1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1544355920
 GameObject:
   m_ObjectHideFlags: 0
@@ -20475,6 +20514,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -21504,6 +21547,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -22454,6 +22501,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -22551,6 +22602,10 @@ PrefabInstance:
       propertyPath: speed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
+      propertyPath: speedButtonsScript
+      value: 
+      objectReference: {fileID: 1529019034}
     - target: {fileID: 1715656283974033574, guid: d820b3036591212498cb3c59fe6ca107, type: 3}
       propertyPath: waypoints.Array.size
       value: 4
