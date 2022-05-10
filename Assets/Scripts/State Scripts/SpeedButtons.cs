@@ -32,7 +32,6 @@ public class SpeedButtons : MonoBehaviour
         {
             setMaxSpeed();
         }
-        Debug.Log(Time.timeScale);
     }
 
     public void setNormalSpeed()

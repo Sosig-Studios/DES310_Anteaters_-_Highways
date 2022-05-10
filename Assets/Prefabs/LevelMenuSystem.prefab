@@ -1700,12 +1700,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCounter: 0
   counterImage: {fileID: 4612657317484784656}
-  counter0Image: {fileID: 21300000, guid: e7eb88bf7a7ad364fa666ebeab563c3b, type: 3}
-  counter1Image: {fileID: 21300000, guid: 3766943acabd4f04f8fc824f0f441e3d, type: 3}
-  counter2Image: {fileID: 21300000, guid: 9847029119dfec84ea4a2edde41048a6, type: 3}
-  counter3Image: {fileID: 21300000, guid: bc53fada63b50d14fbbd65f03fb49f3a, type: 3}
-  counter4Image: {fileID: 21300000, guid: 712e30c010d35994ebb8e7d1bc5c0453, type: 3}
-  counter5Image: {fileID: 21300000, guid: 61bcce4c6db89cc41aa1842ff36ff1d1, type: 3}
+  counter0Image: {fileID: 0}
+  counter1Image: {fileID: 21300000, guid: d406abe610462594ba78ee5d21cb7b95, type: 3}
+  counter2Image: {fileID: 21300000, guid: 42a6b94f96397a64db25a1cc6ff8084b, type: 3}
+  counter3Image: {fileID: 21300000, guid: 435e379b058756d428f2366a4e8dfa10, type: 3}
+  counter4Image: {fileID: 21300000, guid: b304cbec316f0344fa73a4a92e2b29db, type: 3}
+  counter5Image: {fileID: 21300000, guid: 757785635ae9e414bac4d6dcc1110103, type: 3}
 --- !u!1 &3243436744066048965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,7 +3599,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e7eb88bf7a7ad364fa666ebeab563c3b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dbc145e91df7fa245bd1445ceec3d4c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -8,7 +8,7 @@ public class CarScript : MonoBehaviour
     public SpeedButtons speedButtonsScript;
     public Transform[] waypoints;
     public int setSpeed;
-    private int currentSpeed;
+    private int newSpeed;
 
     private int waypointIndex;
     private float distance;
@@ -17,15 +17,17 @@ public class CarScript : MonoBehaviour
     bool inTraffic = false;
     private bool carAlive = true;
     Animation brakeAnim;
-    
+
+    ParticleSystem[] p;
     // Start is called before the first frame update
     void Start()
     {
         carAlive = true;
-        currentSpeed = setSpeed;
+        newSpeed = setSpeed;
         carHorn = GetComponent<AudioSource>();
         speedButtonsScript = GameObject.FindGameObjectWithTag("HUD").GetComponent<SpeedButtons>();
 
+        p = GetComponentsInChildren<ParticleSystem>();
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
 
@@ -35,7 +37,7 @@ public class CarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        maxSpeed = setSpeed * speedButtonsScript.speedModifier;
+        maxSpeed = newSpeed * speedButtonsScript.speedModifier;
         DeleteCar();
         if(carAlive)
         {
@@ -53,12 +55,28 @@ public class CarScript : MonoBehaviour
 
         if (waypointIndex == waypoints.Length)
             Destroy(this);
-            
+
+
+        if (setSpeed == 0)
+        {
+            foreach (ParticleSystem ps in p)
+            {
+                ps.Stop();
+            }
+        }
+        if (setSpeed != 0)
+        {
+            foreach (ParticleSystem ps in p)
+            {
+                ps.Play();
+            }
+        }
+
     }
 
     void Patrol()
     {
-        transform.Translate(Vector3.forward * currentSpeed * speedButtonsScript.speedModifier * Time.deltaTime);
+        transform.Translate(Vector3.forward * setSpeed * speedButtonsScript.speedModifier * Time.deltaTime);
     }
 
     void IncreaseIndex()
@@ -97,10 +115,10 @@ public class CarScript : MonoBehaviour
 
     IEnumerator SlowDownCar()
     {
-        while (currentSpeed != 0)
+        while (setSpeed != 0)
         {
             brakeAnim.Play();
-            currentSpeed -= 1;
+            setSpeed -= 1;
             yield return new WaitForSeconds(0.1f);
         }
 
@@ -108,15 +126,18 @@ public class CarScript : MonoBehaviour
 
     IEnumerator SpeedUpCar()
     {
-        while (currentSpeed != setSpeed)
+        while (setSpeed != newSpeed)
         {
             brakeAnim.Stop();
             yield return new WaitForSeconds(0.05f);
-            currentSpeed += 1;
+            setSpeed += 1;
         }
 
+        /*
+         i dont know how to get on hold working
+        i think when you click on unity it doesnt always recognise the mouse as up, thats the only explanation i can think of
+         */
     }
-
     void TrafficDetect()
     {
 
@@ -146,18 +167,6 @@ public class CarScript : MonoBehaviour
 
     }
 
-    public void AntEaterHit()
-    {
-        StartCoroutine(StopCar());
-    }
 
-    IEnumerator StopCar()
-    {
-        currentSpeed = -7;
-        yield return new WaitForSeconds(0.05f);
-        currentSpeed = 7;
-        yield return new WaitForSeconds(0.2f);
-        currentSpeed = 0;
-    }
 }
 
