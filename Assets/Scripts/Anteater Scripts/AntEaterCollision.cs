@@ -18,9 +18,11 @@ public class AntEaterCollision : MonoBehaviour
 
     public bool HitLeft;
 
+    Animator aeAnim;
+
     void Start()
     {
- 
+        aeAnim = GetComponent<Animator>();
     }
 
     void OnCollisionEnter(UnityEngine.Collision collisionInfo)
@@ -59,6 +61,7 @@ public class AntEaterCollision : MonoBehaviour
 
     IEnumerator eatAnthill(UnityEngine.Collision collision)
     {
+        aeAnim.SetBool("isEating", true);
         float maxSpeed = patrollerScript.speed;
         patrollerScript.speed = 0;
         yield return new WaitForSeconds(0.2f);
@@ -70,6 +73,7 @@ public class AntEaterCollision : MonoBehaviour
         do
         {
             patrollerScript.speed += 1;
+            aeAnim.SetBool("isEating", false);
             yield return new WaitForSeconds(1.0f);
         }
         while (maxSpeed != patrollerScript.speed);
@@ -83,11 +87,11 @@ public class AntEaterCollision : MonoBehaviour
         
         if(HitLeft)
         {
-            //player left death sequence
+            aeAnim.SetBool("isDeadLeft", true);
         }
         else
         {
-            //player right death sequence
+            aeAnim.SetBool("isDeadRight", true);
         }
     }
 

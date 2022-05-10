@@ -9,7 +9,7 @@ public class deathCollect : MonoBehaviour
 
     public Material deadMaterial;
 
-    GameObject anteater;
+    public GameObject anteater;
     // Update is called once per frame
     void Update()
     {
@@ -17,8 +17,7 @@ public class deathCollect : MonoBehaviour
         {
             gameManager.GetComponent<deathCamera>().killedAnteater = gameObject;
             gameManager.GetComponent<deathCamera>().DeathScreen();
-            anteater = gameManager.GetComponent<deathCamera>().killedAnteater;
-            anteater.GetComponent<MeshRenderer>().material = deadMaterial;
+            anteater.GetComponent<SkinnedMeshRenderer>().material = deadMaterial;
             foreach(Light l in FindObjectsOfType<Light>())
             {
                 l.enabled = false;
