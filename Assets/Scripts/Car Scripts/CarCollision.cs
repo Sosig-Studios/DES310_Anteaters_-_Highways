@@ -11,14 +11,14 @@ public class CarCollision : MonoBehaviour
         if (collisionInfo.gameObject.tag == "AntEater")
         {
             Debug.Log("Car Hit Anteater");
-            StartCoroutine(StopCar());
+            //StartCoroutine(StopCar());
+            carScript.AntEaterHit();
 
         }
 
         if (collisionInfo.gameObject.tag == "CarAlert")
         {
             Debug.Log("Car Hit Car Alert");
-            StartCoroutine(StopCar());
 
         }
 
@@ -26,12 +26,12 @@ public class CarCollision : MonoBehaviour
 
     }
 
-    IEnumerator StopCar()
+/*    IEnumerator StopCar()
     {
         carScript.setSpeed = -7;
         yield return new WaitForSeconds(0.05f);
         carScript.setSpeed = 7;
         yield return new WaitForSeconds(0.2f);
         carScript.setSpeed = 0;
-    }
+    }*/
 }
