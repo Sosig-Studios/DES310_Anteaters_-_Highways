@@ -4886,7 +4886,7 @@ MonoBehaviour:
   speedButtonsScript: {fileID: 0}
   waypoints:
   - {fileID: 0}
-  setSpeed: 0
+  setSpeed: 5
 --- !u!114 &7497005078971723201
 MonoBehaviour:
   m_ObjectHideFlags: 0
