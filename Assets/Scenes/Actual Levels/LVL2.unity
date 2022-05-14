@@ -56385,6 +56385,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 402955f19e99183439974101f9238782, type: 3}
+--- !u!82 &1311390457 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4161730280882828574, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+  m_PrefabInstance: {fileID: 2109213557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1313769681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58da37f6715ab6849bbe9a9910f6527a, type: 3}
@@ -94024,6 +94029,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 680143178661449701, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 680143178661449701, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: m_TagString
       value: Level Music
       objectReference: {fileID: 0}
@@ -94038,7 +94047,7 @@ PrefabInstance:
     - target: {fileID: 3243436743942727017, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: levelMusic
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1311390457}
     - target: {fileID: 3243436743942727022, guid: 4d400abbbf4d13b4180d9ce232f193bd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
