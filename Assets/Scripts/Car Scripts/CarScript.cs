@@ -18,6 +18,8 @@ public class CarScript : MonoBehaviour
     private bool carAlive = true;
     Animation brakeAnim;
 
+    public bool anteaterDead = false;
+
     ParticleSystem[] p;
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,8 @@ public class CarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (anteaterDead)
+            return;
         maxSpeed = setSpeed * speedButtonsScript.speedModifier;
         DeleteCar();
         if(carAlive)

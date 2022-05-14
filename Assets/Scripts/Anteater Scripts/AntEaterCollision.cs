@@ -29,22 +29,28 @@ public class AntEaterCollision : MonoBehaviour
     {
         if (collisionInfo.gameObject.tag == "Car")
         {
-            GameObject.FindGameObjectWithTag("Level Music").GetComponent<AudioSource>().Pause();
-            foreach(GameObject a in GameObject.FindGameObjectsWithTag("SFX"))
+            foreach (GameObject g in GameObject.FindGameObjectsWithTag("Car"))
             {
-                a.GetComponent<AudioSource>().Pause();
-            }
-            audioSource.PlayOneShot(sfxHit);
-            patrollerScript.speed = 0;
-            loseLevel();
-            foreach(GameObject g in GameObject.FindGameObjectsWithTag("Car"))
-            {
-                g.GetComponent<CarScript>().setSpeed = 0;
+                g.GetComponent<CarScript>().anteaterDead = true;
             }
             foreach (GameObject g in GameObject.FindGameObjectsWithTag("AntEater"))
             {
                 g.GetComponent<AnteaterScript>().speed = 0;
             }
+            var cl = collisionInfo.gameObject.transform.position;
+            if (cl.z > transform.position.z)
+                HitLeft = true;
+
+            GameObject.FindGameObjectWithTag("Level Music").GetComponent<AudioSource>().Pause();
+            foreach(GameObject a in GameObject.FindGameObjectsWithTag("SFX"))
+            {
+                a.GetComponent<AudioSource>().Pause();
+            }
+            
+            audioSource.PlayOneShot(sfxHit);
+            patrollerScript.speed = 0;
+            loseLevel();
+            
 
         }
 

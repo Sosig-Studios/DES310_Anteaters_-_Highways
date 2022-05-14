@@ -38,11 +38,10 @@ public class WinState : MonoBehaviour
                 break;
             case "LVL2":
                 //if level 2 move to level 3
-                SceneManager.LoadScene("LVL3");
+                SceneManager.LoadScene("CreditsScreen");
                 break;
             case "LVL3":
                 //if level move to credits
-                SceneManager.LoadScene("CreditsScreen");
                 break;
             default:
                 Debug.Log("not working");
